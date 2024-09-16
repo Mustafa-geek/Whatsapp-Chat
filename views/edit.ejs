@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing The Content</title>
+</head>
+
+<body>
+    <h2>Edit Your Post</h2>
+
+    <p>Your id is <%= ans.id %>
+    </p>
+    <p>Your username is <%= ans.username %>
+    </p>
+     <!--jaisa hi btn daba wahan jaana content leke  -->
+    <form method="post" action="/posts/<%=ans.id%>?_method=PATCH">
+        <textarea name="content"><%= ans.content %></textarea> <br> <br>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
